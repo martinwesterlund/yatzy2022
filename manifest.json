@@ -1,0 +1,15 @@
+{
+  "background_color": "#010054",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    { "sizes": "48x48", "src": "/icon.png" }
+  ],
+  "name": "Yatzy",
+  "short_name": "Yatzy",
+  "theme_color": "#010054"
+}
