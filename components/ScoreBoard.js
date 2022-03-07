@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import ScoreBox from "./ScoreBox";
 import AppContext from "../AppContext";
-const ScoreBoard = ({
-resetDices, saveScore  
-}) => {
+const ScoreBoard = ({ resetDices, saveScore }) => {
   const {
     turn,
     setTurn,
@@ -28,7 +26,8 @@ resetDices, saveScore
     setBonusStatus,
     bonus,
     setBonus,
-    yatzy, setYatzy,
+    yatzy,
+    setYatzy,
     onePair,
     setOnePair,
     twoPairs,
@@ -260,7 +259,6 @@ resetDices, saveScore
       fullHouse !== null &&
       chance !== null
     ) {
-      console.log("Bonusen blev:", bonus);
       setFinalPoints(
         aces +
           twos +
