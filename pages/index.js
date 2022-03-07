@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useContext } from "react";
+import Head from "next/head";
 import BigDice from "../components/BigDice";
 import Dice from "../components/Dice";
 import GameOver from "../components/GameOver";
@@ -182,12 +183,16 @@ const Yatzy = () => {
 
   return (
     <>
+      <Head>
+        <title>Yatzy</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="theme-color" content="#010054" />
+        <link rel="manifest" href="../manifest.json" />
+      </Head>
       <div
         className={`h-screen relative flex flex-col justify-around transition-all duration-500 items-center bg-gradient-to-b overflow-hidden from-yatzyBlue to-yatzyBlueDark`}
       >
-        {gameOver && (
-          <GameOver />
-        )}
+        {gameOver && <GameOver />}
         <HighScore />
 
         <Yatzyeffect />
