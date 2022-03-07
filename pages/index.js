@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useContext } from "react";
+import Head from "next/head";
 import BigDice from "../components/BigDice";
 import Dice from "../components/Dice";
 import GameOver from "../components/GameOver";
@@ -176,6 +177,11 @@ const Yatzy = () => {
 
   return (
     <>
+      <Head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <meta name="theme-color" content="#fff" />
+      </Head>
       <div
         className={`h-screen relative flex flex-col justify-around transition-all duration-500 items-center bg-gradient-to-b overflow-hidden from-yatzyBlue to-yatzyBlueDark`}
       >
