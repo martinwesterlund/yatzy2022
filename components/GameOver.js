@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import AppContext from "../AppContext";
 const GameOver = () => {
-  const { setMenuOpen, finalPoints, startNewGame } = useContext(AppContext);
+  const { setMenuOpen, total, startNewGame } = useContext(AppContext);
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -64,7 +64,7 @@ const GameOver = () => {
             exit="away"
             className="flex z-40"
           >
-            {[...finalPoints.toString(), "p"].map((point, i) => (
+            {[...total.toString(), "p"].map((point, i) => (
               <motion.div
                 key={i}
                 variants={item}

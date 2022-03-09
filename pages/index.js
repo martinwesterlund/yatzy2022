@@ -178,13 +178,13 @@ const Yatzy = () => {
   return (
     <>
       <div
-        className={`h-screen relative flex flex-col justify-around transition-all duration-500 items-center bg-gradient-to-b overflow-hidden from-yatzyBlue to-yatzyBlueDark`}
+        className={`h-screen flex flex-col relative transition-all duration-500 items-center bg-gradient-to-b overflow-hidden from-yatzyBlue to-yatzyBlueDark`}
       >
         {gameOver && <GameOver />}
         <HighScore />
 
         <Yatzyeffect />
-        <div className="w-full mt-[10vh] h-[15vh] md:h-[15vh] relative">
+        <div className="w-full h-[15vh] relative my-12 ">
           <Spinningrays show={turn === 0}></Spinningrays>
           <BigDice gameStarted={gameStarted} show={turn === 0} />
 
@@ -252,7 +252,19 @@ const Yatzy = () => {
           </div>
         </div>
 
-        <div className="w-full h-full relative mb-[10vh]">
+        <div className="w-full relative">
+        <ScoreBoard resetDices={resetDices} saveScore={saveScore} />
+        <button
+              className={`mx-auto mt-4 py-4 px-8 bg-yatzyYellow border-2 border-yatzyRed active:scale-90 transition-all duration-300 rounded-full flex items-center ${
+                turn > 2 ? "pointer-events-none opacity-0" : "opacity-100"
+              }`}
+              onClick={() => roll()}
+            >
+              <SmallDice turn={3 - turn} />
+              kast kvar
+            </button>
+          </div>
+        {/* <div className="w-full h-full relative mb-[10vh]">
           <div className="absolute bottom-4 w-full flex flex-col items-center justify-center">
             <ScoreBoard resetDices={resetDices} saveScore={saveScore} />
 
@@ -266,7 +278,7 @@ const Yatzy = () => {
               kast kvar
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

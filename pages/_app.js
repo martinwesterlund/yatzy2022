@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }) {
   const [isYatzy, setIsYatzy] = useState(false);
   const [turn, setTurn] = useState(0);
   const [diceValues, setDiceValues] = useState();
-  const [finalPoints, setFinalPoints] = useState();
   const [highScore, setHighScore] = useState([]);
 
   const [aces, setAces] = useState(null);
@@ -81,8 +80,6 @@ function MyApp({ Component, pageProps }) {
         setTurn,
         diceValues,
         setDiceValues,
-        finalPoints,
-        setFinalPoints,
         highScore,
         setHighScore,
         resetHighScore,

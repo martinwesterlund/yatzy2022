@@ -8,7 +8,6 @@ const ScoreBoard = ({ resetDices, saveScore }) => {
     setHlScore,
     setGameStarted,
     diceValues,
-    setFinalPoints,
     setGameOver,
     aces,
     setAces,
@@ -259,24 +258,6 @@ const ScoreBoard = ({ resetDices, saveScore }) => {
       fullHouse !== null &&
       chance !== null
     ) {
-      setFinalPoints(
-        aces +
-          twos +
-          threes +
-          fours +
-          fives +
-          sixes +
-          bonus +
-          yatzy +
-          onePair +
-          twoPairs +
-          threeOfAKind +
-          fourOfAKind +
-          smallStraight +
-          bigStraight +
-          fullHouse +
-          chance
-      );
       saveScore(
         aces +
           twos +
